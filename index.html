@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Providus</title>
+<title>Prank App</title>
 <meta name="theme-color" content="#1f2030">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <style>
-:root{--bg:#f8f8fa;--card:#fff;--ink:#1f2030;--mute:#6b6b82;--line:#d6d6e0;--accent:#4a55e0;--chip:#f1f1f5}
-@media (prefers-color-scheme:dark){:root{--bg:#15161f;--card:#1f2030;--ink:#f1f1f7;--mute:#9a9ab2;--line:#34364a;--chip:#2a2c40}}
+:root{color-scheme:light;--bg:#f8f8fa;--card:#fff;--ink:#1f2030;--mute:#6b6b82;--line:#d6d6e0;--accent:#4a55e0;--chip:#f1f1f5}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--ink);font-family:Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;justify-content:center}
@@ -43,7 +42,7 @@ nav i{display:block;font-style:normal;font-size:24px}
     <div class="row" style="margin-top:12px"><div style="font-size:26px"><span style="font-weight:500">Hello,</span> Great Adeleye ▾</div><div>🟢</div></div>
     <div class="card" style="margin-top:24px">
       <div class="row"><span style="color:var(--mute);font-size:18px">Total Balance <span id="eye" style="cursor:pointer">👁️</span></span><span>⤢</span></div>
-      <div class="bal" id="bal">₦750,000.00</div>
+      <div class="bal" id="bal">₦57,050,000.00</div>
       <div style="font-size:19px;margin:18px 0 20px">My Accounts ›</div>
       <button class="btn" id="mk">Make Transfer</button>
     </div>
@@ -56,7 +55,7 @@ nav i{display:block;font-style:normal;font-size:24px}
       <div class="tx"><div class="av">BG</div><div><b>Ikechukwu…</b><span>1:05 PM</span></div><div class="amt">−₦400,000.00</div></div>
     </div>
   </div>
-  <nav><div class="a"><i>🧾</i>Dashboard</div><div><i>🧾</i>Transactions</div><div id="goT"><i>➤</i>Transfer</div><div><i>🧾</i>Payments</div><div><i>☰</i>More</div></nav>
+  <nav><div class="a"><i>🏠</i>Dashboard</div><div><i>🧾</i>Transactions</div><div id="goT"><i>➤</i>Transfer</div><div><i>👛</i>Payments</div><div><i>☰</i>More</div></nav>
 </div>
 
 <div id="pop"><div class="alert"><h3>⚠ WARNING</h3><p>This account is restricted.</p><button id="ok">OK</button></div></div>
@@ -68,7 +67,7 @@ $('mk').onclick=open;
 $('goT').onclick=open;
 $('ok').onclick=function(){$('pop').classList.remove('on')};
 var hidden=false;
-$('eye').onclick=function(){hidden=!hidden;$('bal').textContent=hidden?'₦ ••••••':'₦750,000.00'};
+$('eye').onclick=function(){hidden=!hidden;$('bal').textContent=hidden?'₦ ••••••':'₦57,050,000.00'};
 if('serviceWorker' in navigator && location.protocol.indexOf('http')===0){navigator.serviceWorker.register('sw.js').catch(function(){})}
 </script>
 </body>
